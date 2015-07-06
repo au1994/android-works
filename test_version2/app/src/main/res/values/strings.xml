@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">test_version2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="share">SHARE</string>
+    <string name="learn_more">LEARN MORE</string>
+    <string name="Submit">Search</string>
+    <string name="password">password</string>
+    <string name="username">search</string>
+    <string name="dotmic">Enter user id and password</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="date">Date</string>
+    <string name="store">Store</string>
+    <string name="description">Description</string>
+    <string name="link">Link</string>
+    <string name="Search">Enter Keyword!</string>
+</resources>
