@@ -18,6 +18,9 @@ public class CustomCard extends Card {
     protected TextView mSecondaryTitle;
     protected TextView mThirdTitle;
     public String uid;
+    public String price1;
+    public String price2;
+    public String price3;
     void setuid(String id)
     {
         this.uid = id;
@@ -27,8 +30,13 @@ public class CustomCard extends Card {
      * Constructor with a custom inner layout
      * @param context
      */
-    public CustomCard(Context context) {
+    public CustomCard(Context context,myCardElements obj) {
         this(context, R.layout.carddemo_mycard_inner_content);
+        this.uid= obj.uid;
+        this.price1=obj.price1;
+        this.price2=obj.price2;
+        this.price3=obj.price3;
+        System.out.println(uid);
     }
 
     /**
@@ -50,22 +58,22 @@ public class CustomCard extends Card {
     @Override
     public void setupInnerViewElements(ViewGroup parent, View view) {
 
-        myCardElements obj = new myCardElements();
+        //myCardElements obj = new myCardElements();
 
         //Retrieve elements
         mTitle = (TextView) parent.findViewById(R.id.carddemo_myapps_main_inner_title);
-      //  mSecondaryTitle = (TextView) parent.findViewById(R.id.carddemo_myapps_main_inner_secondaryTitle);
-      //  mThirdTitle = (TextView) parent.findViewById(R.id.carddemo_myapps_main_inner_ThirdTitle);
+        mSecondaryTitle = (TextView) parent.findViewById(R.id.carddemo_myapps_main_inner_secondaryTitle);
+        mThirdTitle = (TextView) parent.findViewById(R.id.carddemo_myapps_main_inner_ThirdTitle);
 
-        String title = Search_Result.Ttitle;
+        //String title = Search_Result.Ttitle;
         if (mTitle!=null)
-            mTitle.setText(title);
+            mTitle.setText(uid);
 
-       /* if (mSecondaryTitle!=null)
-            mSecondaryTitle.setText("anku 2");
+        if (mSecondaryTitle!=null)
+            mSecondaryTitle.setText(price1);
 
         if (mThirdTitle!=null)
-            mThirdTitle.setText("anku 3");*/
+            mThirdTitle.setText(price2);
 
     }
 }

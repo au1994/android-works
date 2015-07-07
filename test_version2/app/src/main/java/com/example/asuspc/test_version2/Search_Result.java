@@ -226,9 +226,9 @@ public class Search_Result extends Activity {
             //CustomCard obj = new CustomCard(this);
             //obj.setUid(uid);
             Ttitle = obj_myCardElements.uid;
-           // Card card = new CustomCard(this);
-                Card card = new Card(this);
-            card.setTitle(uid);
+            Card card = new CustomCard(this,obj_myCardElements);
+             //   Card card = new Card(this);
+            //card.setTitle(uid);
 
             //Create a CardHeader
             //CustomHeaderInnerCard header = new CustomHeaderInnerCard(this);
